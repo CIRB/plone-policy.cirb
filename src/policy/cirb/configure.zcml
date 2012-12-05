@@ -16,5 +16,17 @@
       />
   <!-- -*- extra stuff goes here -*- -->
   <include package="plonetheme.cirb" />
+  <include package="Products.PloneFormGen" />
+  <include package="collective.ckeditor" />
+  <include package="collective.quickupload" />
+  <include package="quintagroup.analytics" />
+  <include package="Products.PloneFormGen" />
+  <include package="collective.anysurfer" />
+  <include package="Products.PloneHelpCenter" />
+  <include package="collective.contentstats" />
+  <include package="collective.recaptcha" />
+  <include package="Products.CirbCountdown" />
+  <include package="Products.Collage" />
+  <include package="collective.collage.portlets" />
   
 </configure>

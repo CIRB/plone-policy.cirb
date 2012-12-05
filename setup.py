@@ -36,7 +36,20 @@ setup(name='policy.cirb',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
-          'plonetheme.cirb'
+          'plonetheme.cirb',
+	  'Products.PloneFormGen',
+	  'collective.ckeditor',
+	  'collective.plonefinder',
+	  'collective.quickupload',
+	  'quintagroup.analytics',
+	  'fourdigits.portlet.twitter',
+	  'collective.anysurfer',
+          'Products.PloneHelpCenter',
+	  'collective.contentstats',
+	  'collective.recaptcha',
+          'Products.CirbCountdown',
+	  'Products.Collage',
+          'collective.collage.portlets'
       ],
       extras_require={'test': ['plone.app.testing']},
       entry_points="""
