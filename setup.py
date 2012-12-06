@@ -49,6 +49,7 @@ setup(name='policy.cirb',
 	  'collective.recaptcha',
           'Products.CirbCountdown',
 	  'Products.Collage',
+ 	  'webcouturier.dropdownmenu',
           'collective.collage.portlets'
       ],
       extras_require={'test': ['plone.app.testing']},
