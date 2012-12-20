@@ -29,5 +29,6 @@
   <include package="Products.Collage" />
   <include package="webcouturier.dropdownmenu" />
   <include package="collective.collage.portlets" />
+  <include package="cirb.zopemonitoring" />
   
 </configure>
