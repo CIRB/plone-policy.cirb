@@ -61,6 +61,7 @@ setup(name='policy.cirb',
             'collective.portlet.twittermultistream',
             'collective.portlet.socialnetworks',
             #/blog
+            'plone.api',  # to make upgrade steps easier to write
 
             ],
         extras_require={'test': ['plone.app.testing']},

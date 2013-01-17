@@ -1,4 +1,5 @@
 import logging
+from plone import api
 from Products.CMFCore.utils import getToolByName
 
 PROFILE = "profile-policy.cirb:default"
@@ -61,3 +62,19 @@ def common(context):
 
     context.runAllImportStepsFromProfile(PROFILE)
     logger.info("Apply %s" % PROFILE)
+
+    migrate_to_cirb_blog(context)
+
+
+def migrate_to_cirb_blog(context):
+    portal = api.portal.get()
+    blog = None
+    if 'blog' in portal.objectIds():
+        blog = portal.blog
+        if blog.portal_type == 'Link':
+            api.content.delete(blog)
+            blog = None
+    if blog is None:
+        blog = api.content.create(portal, 'Folder', 'blog', 'Blog')
+    #call the blog setup view
+    blog.restrictedTraverse('cirb_blog_setup')()
