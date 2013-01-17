@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <metadata>
-  <version>0001</version>
+  <version>0003</version>
     <dependencies>
         <dependency>profile-plonetheme.cirb:default</dependency>
+        <dependency>profile-cirb.blog:default</dependency>
     </dependencies>
 </metadata>

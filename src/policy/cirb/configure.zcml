@@ -14,6 +14,7 @@
       description="Installs the policy.cirb package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+  <include file="upgrades.zcml" />
   <!-- -*- extra stuff goes here -*- -->
   <include package="plonetheme.cirb" />
   <include package="Products.PloneFormGen" />
@@ -30,5 +31,5 @@
   <include package="webcouturier.dropdownmenu" />
   <include package="collective.collage.portlets" />
   <include package="cirb.zopemonitoring" />
-  
+
 </configure>

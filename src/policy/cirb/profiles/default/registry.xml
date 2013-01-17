@@ -1,0 +1,8 @@
+<registry>
+
+  <records interface="collective.recaptcha.settings.IReCaptchaSettings">
+     <value key="public_key">6LfrrNsSAAAAANk1fFBbI7s9eUt8yVwApIZCgMRM</value>
+     <value key="private_key">6LfrrNsSAAAAAHahMWnrsYALxYpz1XRqMqP3J_bU</value>
+  </records>
+
+</registry>

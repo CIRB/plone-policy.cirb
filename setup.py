@@ -52,6 +52,16 @@ setup(name='policy.cirb',
             'webcouturier.dropdownmenu',
             'collective.collage.portlets',
             'cirb.zopemonitoring',
+            'cirb.blog',
+            #extra feature for blog
+            'archetypes.linguakeywordwidget',
+            'collective.categories',
+            'collective.diggdigg',
+            'collective.portlet.oembed',
+            'collective.portlet.twittermultistream',
+            'collective.portlet.socialnetworks',
+            #/blog
+
             ],
         extras_require={'test': ['plone.app.testing']},
         entry_points="""

@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/genericsetup"
+    i18n_domain="policy.cirb">
+
+    <upgradeStep
+        source="*"
+        destination="0003"
+        title="Upgrade"
+        description=""
+        profile="policy.cirb:default"
+        handler=".upgrades.common"
+        />
+
+</configure>
