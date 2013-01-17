@@ -4,5 +4,7 @@
      <value key="public_key">6LfrrNsSAAAAANk1fFBbI7s9eUt8yVwApIZCgMRM</value>
      <value key="private_key">6LfrrNsSAAAAAHahMWnrsYALxYpz1XRqMqP3J_bU</value>
   </records>
-
+   <record name="collective.categories.backend">
+    <value>archetypes.linguakeywordwidget</value>
+   </record>
 </registry>
