@@ -6,7 +6,10 @@ Changelog
 
 - Install other dependencies: twittermultistream, diggdigg, categories,
   oembed and socialnetworks
-
+- Configure Recaptcha for localhost (should be updated with a real url)
+- Configure collective.categories backend to archetypes.linguakeywordwidget
+- Configure collective.portlet.socialnetworks to follow CIRB on
+  facebook, twitter, linkedin and youtube
 
 1.2.1 (2013-01-17)
 ------------------
