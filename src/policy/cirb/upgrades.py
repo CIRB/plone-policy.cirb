@@ -1,6 +1,7 @@
 import logging
 from plone import api
 from Products.CMFCore.utils import getToolByName
+from zope.site.hooks import getSite
 
 PROFILE = "profile-policy.cirb:default"
 BLACKLIST_UPGRADES = ('PloneHelpCenter',)
@@ -48,6 +49,7 @@ def quickinstall_addons(context, install=None, uninstall=None, upgrades=None):
 
 def common(context):
     logger = logging.getLogger(PROFILE)
+    clean_old_interfaces(context)
 
     # remove everythings from the portal_skins/custom
     # empty_portalskins_custom(context)
@@ -57,6 +59,8 @@ def common(context):
     portal_migration.upgrade()
     logger.info("Ran Plone Upgrade")
 
+    quickinstall_addons(context, install=['cirb.blog'])
+
     #upgrades installed addons
     quickinstall_addons(context, upgrades=True)
 
@@ -64,6 +68,7 @@ def common(context):
     logger.info("Apply %s" % PROFILE)
 
     migrate_to_cirb_blog(context)
+    logger.info("End upgrade policy cirb")
 
 
 def migrate_to_cirb_blog(context):
@@ -78,3 +83,35 @@ def migrate_to_cirb_blog(context):
         blog = api.content.create(portal, 'Folder', 'blog', 'Blog')
     #call the blog setup view
     blog.restrictedTraverse('cirb_blog_setup')()
+
+
+def clean_old_interfaces(context):
+    log = logging.getLogger("policy CIRB clean old interfaces")
+
+    registry = context.getImportStepRegistry()
+    old_steps = ["cirb.site.various", "setupFolderNav"]
+    for old_step in old_steps:
+        if old_step in registry.listSteps():
+            registry.unregisterStep(old_step)
+            # Unfortunately we manually have to signal the context
+            # (portal_setup)
+            # that it has changed otherwise this change is not persisted.
+            context._p_changed = True
+            log.info("Old %s import step removed from import registry.",
+                        old_step)
+
+    # XXX clean some unused skins !
+    adapters = getSite().getSiteManager().adapters._adapters
+    # 'IThemeSpecific' from module 'cirb.site.browser.interfaces
+    for adapter in adapters:
+        if adapter.keys():
+            if adapter.keys()[0].__module__ == 'zope.interface':
+                dic = adapter.values()[0]
+                for key in dic.keys():
+                    if key.__module__ == 'cirb.site.browser.interfaces':
+                        del dic[key]
+                        log.info("delete {0} ".format(key.__module__))
+                        getSite().getSiteManager().adapters._p_changed = True
+
+    getSite().getSiteManager().adapters._adapters = adapters
+    context._p_jar.sync()

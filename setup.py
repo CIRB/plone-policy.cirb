@@ -62,7 +62,8 @@ setup(name='policy.cirb',
             'collective.portlet.socialnetworks',
             #/blog
             'plone.api',  # to make upgrade steps easier to write
-
+            #'plone.app.multilingual',
+            #'plone.multilingualbehavior',
             ],
         extras_require={'test': ['plone.app.testing']},
         entry_points="""

@@ -4,7 +4,7 @@
 
     <upgradeStep
         source="*"
-        destination="0004"
+        destination="0005"
         title="Upgrade"
         description=""
         profile="policy.cirb:default"
