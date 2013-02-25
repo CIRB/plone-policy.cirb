@@ -60,6 +60,9 @@ setup(name='policy.cirb',
             'collective.portlet.oembed',
             'collective.portlet.twittermultistream',
             'collective.portlet.socialnetworks',
+            'collective.configviews',
+	    'collective.portlet.categories',
+	    'collective.portlet.keywords',
             #/blog
             'plone.api',  # to make upgrade steps easier to write
             #'plone.app.multilingual',

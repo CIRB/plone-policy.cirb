@@ -31,5 +31,8 @@
   <include package="webcouturier.dropdownmenu" />
   <include package="collective.collage.portlets" />
   <include package="cirb.zopemonitoring" />
+  <include package="collective.configviews" />
+  <include package="collective.portlet.categories" />
+  <include package="collective.portlet.keywords" />
 
 </configure>
