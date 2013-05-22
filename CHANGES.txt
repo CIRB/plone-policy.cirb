@@ -4,7 +4,8 @@ Changelog
 1.2.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Delete Products.CirbCountdown
+- Add collective.milf
 
 
 1.2.2 (2013-02-25)
