@@ -26,7 +26,6 @@
   <include package="Products.PloneHelpCenter" />
   <include package="collective.contentstats" />
   <include package="collective.recaptcha" />
-  <include package="Products.CirbCountdown" />
   <include package="Products.Collage" />
   <include package="webcouturier.dropdownmenu" />
   <include package="collective.collage.portlets" />
