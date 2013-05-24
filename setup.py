@@ -67,6 +67,7 @@ setup(name='policy.cirb',
             #'plone.app.multilingual',
             #'plone.multilingualbehavior',
             'collective.milf',
+            'pkginfo',
             ],
         extras_require={'test': ['plone.app.testing']},
         entry_points="""

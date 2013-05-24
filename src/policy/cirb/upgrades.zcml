@@ -11,4 +11,14 @@
         handler=".upgrades.common"
         />
 
+    <upgradeStep
+        source="0005"
+        destination="0006"
+        title="Upgrade"
+        description=""
+        profile="policy.cirb:default"
+        handler=".upgrades.migrate_to_fr_nl_folder"
+        />
+
+
 </configure>

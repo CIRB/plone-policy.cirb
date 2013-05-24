@@ -1,7 +1,18 @@
 import logging
 from plone import api
+
 from Products.CMFCore.utils import getToolByName
+
+from zope.app.container.interfaces import INameChooser
 from zope.site.hooks import getSite
+from zope.component import getUtility
+from zope.component import getMultiAdapter
+
+from plone.portlets.interfaces import IPortletManager
+from plone.portlets.interfaces import IPortletAssignmentMapping
+
+from plone.app.portlets.portlets import navigation
+
 
 PROFILE = "profile-policy.cirb:default"
 BLACKLIST_UPGRADES = ('PloneHelpCenter',)
@@ -115,3 +126,21 @@ def clean_old_interfaces(context):
 
     getSite().getSiteManager().adapters._adapters = adapters
     context._p_jar.sync()
+
+
+def migrate_to_fr_nl_folder(context):
+    if not getattr(context, 'fr'):
+        return
+    home_fr = getattr(context.fr, 'start-1-fr').homepage
+    home_nl = getattr(context.nl, 'start-1').home
+    home_en = getattr(context.en, 'start-1-en').homepage
+
+    api.content.move(source=home_fr, target=context.fr)
+    api.content.move(source=home_nl, target=context.nl)
+    api.content.move(source=home_en, target=context.en)
+
+    context.fr.setDefaultPage('homepage')
+    context.nl.setDefaultPage('home')
+    context.en.setDefaultPage('homepage')
+
+
