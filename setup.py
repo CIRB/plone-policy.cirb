@@ -66,7 +66,7 @@ setup(name='policy.cirb',
             'plone.api',  # to make upgrade steps easier to write
             #'plone.app.multilingual',
             #'plone.multilingualbehavior',
-            'collective.milf',
+            'collective.languagemovefolders',
             'pkginfo',
             ],
         extras_require={'test': ['plone.app.testing']},
