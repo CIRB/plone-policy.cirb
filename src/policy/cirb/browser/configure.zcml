@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="policy.cirb">
+
+    <browser:page
+        name="pkginfo"
+        for="*"
+        permission="zope2.View"
+        class=".pkginfo.PkginfoView"
+        />
+
+
+</configure>
