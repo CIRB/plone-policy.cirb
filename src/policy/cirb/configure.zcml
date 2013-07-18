@@ -16,6 +16,15 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
   <include file="upgrades.zcml" />
+  <genericsetup:upgradeSteps 
+      source="0006"
+      destination="0007"
+      profile="policy.acwb:default">
+      <genericsetup:upgradeDepends 
+          title="Fix Google Analytics"
+           import_steps="propertiestool" 
+      />
+  </genericsetup:upgradeSteps>
   <!-- -*- extra stuff goes here -*- -->
   <include package="plonetheme.cirb" />
   <include package="Products.PloneFormGen" />
