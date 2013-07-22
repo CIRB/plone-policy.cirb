@@ -68,6 +68,7 @@ setup(name='policy.cirb',
             #'plone.multilingualbehavior',
             'collective.languagemovefolders',
             'collective.stomach',
+            'collective.checktranslated',
             ],
         extras_require={'test': ['plone.app.testing']},
         entry_points="""
