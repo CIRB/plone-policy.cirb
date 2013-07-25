@@ -1,10 +1,10 @@
 Changelog
 =========
 
-1.2.8 (unreleased)
+1.2.8 (2013-07-25)
 ------------------
 
-- Nothing changed yet.
+- prepare Plone 4.3.x.
 
 
 1.2.7 (2013-07-22)
