@@ -3,15 +3,7 @@ from plone import api
 
 from Products.CMFCore.utils import getToolByName
 
-from zope.app.container.interfaces import INameChooser
 from zope.site.hooks import getSite
-from zope.component import getUtility
-from zope.component import getMultiAdapter
-
-from plone.portlets.interfaces import IPortletManager
-from plone.portlets.interfaces import IPortletAssignmentMapping
-
-from plone.app.portlets.portlets import navigation
 
 
 PROFILE = "profile-policy.cirb:default"
