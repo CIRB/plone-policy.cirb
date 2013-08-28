@@ -36,7 +36,7 @@ setup(name='policy.cirb',
         install_requires=[
             'setuptools',
             # -*- Extra requirements: -*-
-            'plonetheme.cirb',
+#            'plonetheme.cirb',
             'Products.PloneFormGen',
             'collective.ckeditor',
             'collective.plonefinder',

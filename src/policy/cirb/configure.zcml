@@ -26,7 +26,7 @@
       />
   </genericsetup:upgradeSteps>
   <!-- -*- extra stuff goes here -*- -->
-  <include package="plonetheme.cirb" />
+  <!--include package="plonetheme.cirb" /-->
   <include package="Products.PloneFormGen" />
   <include package="collective.ckeditor" />
   <include package="collective.quickupload" />

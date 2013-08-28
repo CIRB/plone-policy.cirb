@@ -2,7 +2,7 @@
 <metadata>
   <version>0007</version>
     <dependencies>
-        <dependency>profile-plonetheme.cirb:default</dependency>
+        <!--dependency>profile-plonetheme.cirb:default</dependency-->
         <dependency>profile-cirb.blog:default</dependency>
         <dependency>profile-collective.portlet.twittermultistream:default</dependency>
         <dependency>profile-collective.categories:default</dependency>
